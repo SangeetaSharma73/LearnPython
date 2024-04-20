@@ -78,3 +78,38 @@ c=intro('siya',23,'song')
 print(c,type(c))
 
 #scope of a variable
+'''THere are two scope of a variable: Global and Local 
+   Global variable can be used anywhere in a program
+   Local variable can only be used locally inside a program(function)
+'''
+#a can be used anywhere in the program
+a=5
+def func():
+    print(a)
+func()
+print(a)
+
+a=5
+def func():
+    # x is a local variable to this func
+    x=3 
+    print(x)
+func()
+print(a)
+# print(x) NameError: name 'x' is not defined
+
+a=5
+def func():
+    a=20
+    print(a) #20
+func()
+print(a) #5
+
+a=5
+def func():
+    global a
+    a=20
+    print(a)#20
+print(a) #20
+func()
+print(a)

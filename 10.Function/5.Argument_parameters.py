@@ -26,4 +26,4 @@ intro('prateek','swim')
 #     print('hey this is ',name)
 #     print('And my hobby is',hobby)
     
-    
+#arbitary arguments

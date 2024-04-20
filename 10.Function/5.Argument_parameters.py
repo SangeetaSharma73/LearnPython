@@ -61,3 +61,7 @@ def mix(a,b,c,age=34,*args,**kwarks):
 mix(2,4,5)
 mix(2,4,5,45,6,8,9,name='mona',hobby='dance')
 
+def intro1(**kwarks,*args): #SyntaxError: arguments cannot follow var-keyword argument
+    print(args)
+    print(kwarks)
+    

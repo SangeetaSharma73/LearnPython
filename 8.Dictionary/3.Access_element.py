@@ -32,15 +32,15 @@ print('Apple' in fruit)
 
 
 #dict.pop(key)
-fruit.pop('apple')
+# fruit.pop('apple') #keyError 'apple' not exist
 print(fruit)
 
 #dict.popitem()
-fruit.popitem()
-print(fruit)
+popvalue=fruit.popitem()
+print(fruit,popvalue)
 
 #del object
 
 fruit={'A':2,'B':2,'d':5}
 del fruit
-print(fruit)
+# print(fruit) NameError: name 'fruit' is not defined. Did you mean: 'quit'?

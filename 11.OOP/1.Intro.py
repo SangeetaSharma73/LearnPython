@@ -1,5 +1,5 @@
 '''Object oriented programming
-   The principles of OOPs are based on 4 pillars aparat from class and objects
+   The principles of OOPs are based on 4 pillars apart from class and objects
    A class has attributes and behaviour '''
 
 '''1. Class:  A class is a blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods) that the objects created from the class will have.

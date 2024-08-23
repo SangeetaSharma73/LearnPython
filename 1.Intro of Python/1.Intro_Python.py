@@ -209,10 +209,12 @@ my_variable_name = "John"
 # Many Values to Multiple Variables
 
 '''Python allows you to assign values to multiple variables in one line'''
-x, y, z = "Orange", "Banana", "Cherry"
+# x, y, z,t = "Orange", "Banana", "Cherry"
+x, y, z="Orange", "Banana", "Cherry"
 print(x)
 print(y)
 print(z)
+# print(t)#(value error: not enough values to unpack )
 
 
 #One Value to Multiple Variables

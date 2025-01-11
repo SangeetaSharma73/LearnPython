@@ -1,6 +1,5 @@
 #while- syntax
 
-
 #1.Initializing value
 #2.Loop COndition
 #3.Updating value

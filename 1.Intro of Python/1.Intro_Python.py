@@ -41,7 +41,9 @@ print('Hello World')
 Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.
 Python uses indentation to indicate a block of code.
 '''
-
+# print('yes')
+# print()
+# print('this')
 # Ex-
 if 5 > 2:
   print("Five is greater than two!")
@@ -55,7 +57,7 @@ print("Five is greater than two!")'''
 # The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one.
 
 if 5>2:
-    print('five is greater')
+  print('five is greater')
 if 5>2:
       print('five is greater')
 
@@ -80,9 +82,10 @@ print(x)
 # Casting
 '''If you want to specify the data type of a variable, this can be done with casting.'''
 x = str(3)    # x will be '3'
-y = int(3)    # y will be 3
+y = int("3")    # y will be 3
 z = float(3)  # z will be 3.0
-
+p= float("3")
+print(p)
 
 #Naming a variable
 #1.Variable should start with a letter or the underscore charactor
@@ -106,7 +109,6 @@ myvar2 = "John"
 2myvar = "John"
 my-var = "John"
 my var = "John"
-
 '''
 #Note: Remember that variable names are case-sensitive
 
@@ -117,7 +119,7 @@ my var = "John"
 
 #id function
 x=2
-id(x)
+print("this is the id",id(x))
 
 
 #stack /Heap memory
@@ -128,7 +130,6 @@ id(x)
 # 1. Stack Memory:
 '''The stack memory is where function calls and local variables are stored.
 This memory is used for the static allocation of memory and is automatically managed by Python.
-
 '''
 
 # Characteristics of Stack Memory:

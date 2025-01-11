@@ -1,7 +1,7 @@
 #input function
-# name=input() #string always
-# print(name)
-# print(type(name))
+name=input() #string always
+print(name)
+print(type(name))
 
 #type conversion
 x=1.5

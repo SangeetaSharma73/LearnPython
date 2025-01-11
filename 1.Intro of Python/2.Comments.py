@@ -75,3 +75,9 @@ multiline string
 n=None
 print(n)
 print(type(n))
+
+#falsy= [],{},"",None
+if n:
+    print('this is if')
+else:
+    print('else block')

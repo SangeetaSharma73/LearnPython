@@ -9,15 +9,15 @@
 # #upper 
 # print(name.upper(),id(name.upper()))
 
-# name="mona sharma"
+name="mona sharma"
 # #lower
 # print(name.lower(),id(name.lower()))
 
 
 # #find
-# print(name.find('Ra'))
+print(name.find('Ra'))
 # print(name.find('sa'))
-# print(name.find('a'))
+print(name.find('a'))
 
 # #count
 # print(name.count('a'))
@@ -29,7 +29,7 @@
 # print(name.replace('a','p'),id(name.replace('a','p')))
 
 # #split()
-# print(name.split(' '))
+print(name.split(' '))
 # print(name.split('e'))
 
 # #isupper()

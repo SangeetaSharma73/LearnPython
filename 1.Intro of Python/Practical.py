@@ -13,4 +13,4 @@ def fun():
     
 
 fun()
-# print('my x var',x)#NameError: name 'x' is not defined
+print('my x var',x)

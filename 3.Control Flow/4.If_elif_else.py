@@ -25,7 +25,7 @@ Geeta=34
 if Riya>sapna and Riya>Geeta:
     print('Riya is topper')
 elif sapna>Riya and sapna>Geeta:
-    print('Riya is topper')
+    print('Sapna is topper')
 else:
     print('Geeta is topper')
 

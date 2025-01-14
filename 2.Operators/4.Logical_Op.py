@@ -27,6 +27,8 @@ print('R' in name)
 print('i' in name)
 
 a=2
-b=3
+b=4
+c=2
+print(a is b)
 print('is',id(a) is id(b) )
-print(id(a))
+print(id(a) is id(c))

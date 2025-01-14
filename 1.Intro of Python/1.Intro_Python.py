@@ -72,7 +72,6 @@ if 5 > 2:
 
 #variable-Variables are placeholders for storing data
 #variable name=(Assignment operator) value to be assigned 
-
 # Creating Variables
 '''Python has no command for declaring a variable.
 A variable is created the moment you first assign a value to it.'''

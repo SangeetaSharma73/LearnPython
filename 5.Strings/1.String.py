@@ -4,6 +4,10 @@
 #multiline string- whatever written in triple quotes 
 
 string='I am this'
+# arr = [1,2,3]
+# arr[1]=5
+# print(arr)
+# string[0]='S'
 print(string)
 print(type(string))
 string1='''this is the 

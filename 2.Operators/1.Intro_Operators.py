@@ -14,9 +14,10 @@ print(a%b)#modulo- which will give remainder
 #string concatenation
 first='hi, '
 second='this is sang'
-print(first+second)
+print(first+second) # hithis is sang
 
-print('1'+'1')
+print('1'+'1') #11
 # print('24'-1)#unsupported operand type(s) for -: 'str' and 'int'
 print(first*3)
-print(-3//2) #why?
+# 'hi, ', 'hi, ', 'hi, '
+print(-3//2) 

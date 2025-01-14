@@ -8,9 +8,10 @@ name='Sangeeta Sharma'
 for i in range(len(name)):
     print(name[i],end=' ')
 print()
-#Slicing
 
-print(name[0:3])
+#Slicing: 
+
+print(name[0:3:2])
 print(name[:2:-2])
 
 #this will give whole string
@@ -18,4 +19,4 @@ print(name[:])
 
 #negative slicing
 print(name[::-1])
-print(name[1:-2:-1])
+print('test',name[1:2:-1])

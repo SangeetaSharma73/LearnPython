@@ -27,6 +27,7 @@ print(arr)
 
 a=[1,2,3,4]
 a2=[2,3]
+# a+=a2
 a.append(a2)
 print(a)
 

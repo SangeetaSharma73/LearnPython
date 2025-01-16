@@ -8,7 +8,7 @@
 lst=list()
 print(lst,type(lst))
 l1=[1,2,3,4,7]
-print(type(lst))
+print(type(lst)) # list
 
 #Accessing item using index and index start from 0 
 print(l1[0],l1[1],l1[4])
@@ -20,7 +20,13 @@ print(l1[-1],l1[-2],l1[-4])
 arr=[1,2,4,3]
 print(id(l1))
 arr2=arr
-print(id(arr2),id(arr))
+arr2[1]=5
+print(arr,arr2,"both value")
+arr3 = [1,2,3]
+arr4= [1,2,3]
+arr4[1]=10
+print(arr4,arr3)
+print("s1",id(arr2),id(arr))
 print(id([]),id([]))
 print(id([1]),id([2]))
 a=[]

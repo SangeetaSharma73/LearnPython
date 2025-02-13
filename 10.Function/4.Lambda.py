@@ -28,6 +28,7 @@ print(lst) #[(2,4),(5,3),(12,56)]
 
 def k(x):
     return x[1]
+lst=[(12,56),(2,4),(5,3)]
 lst.sort(key=k)
 print(lst)#[(5,3),(2,4),(12,56)]
 

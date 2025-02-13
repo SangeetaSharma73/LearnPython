@@ -5,7 +5,7 @@ def func(name):
 a=func('Sangeeta')
 print(a)#sangeeta is a actual value that we called argument
 
-#positional arguments-The value you pass when calling a function are matched accroding to their positions
+#positional arguments-The value you pass when calling a function are matched according to their positions
 def intro(name,hobby):
     print('Hey my name is',name)
     print('And my hobby is',hobby)

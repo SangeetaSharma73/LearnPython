@@ -36,6 +36,7 @@ add(2,3)
 def add(a,b):
     c=a+b
     print(c)
+    return c
 add(3,4)
 
 a=add(3,4)

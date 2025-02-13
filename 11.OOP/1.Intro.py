@@ -1,6 +1,6 @@
 '''Object oriented programming
    The principles of OOPs are based on 4 pillars apart from class and objects
-   A class has attributes and behaviour '''
+   A class has attributes and behavior '''
 
 '''1. Class:  A class is a blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods) that the objects created from the class will have.
 It allows you to structure your program into reusable pieces of code.'''
@@ -51,3 +51,4 @@ While defining a class method, self is the first parameter, and when the method 
 When you create an object, the class needs a way to refer to that specific object. 
 self acts as that reference,enabling the constructor (and other methods) 
 to manipulate the attributes of the particular instance.'''
+

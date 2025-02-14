@@ -274,3 +274,5 @@ d.method_D()  # Own method
 # 📌 Why is it useful?
 
 # We can combine different types of inheritance to make our code more powerful! 💪
+
+

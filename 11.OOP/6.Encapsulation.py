@@ -136,3 +136,222 @@ account.withdraw(2000)  # Output: Invalid withdrawal amount.
 account.withdraw(300)
 print(account.get_balance())  # Output: 1200
 # Here, the __balance is a private attribute, and it's only modified through methods like deposit() and withdraw().
+
+
+'''🔍 What is Encapsulation?
+💡 Encapsulation means "hiding important data and allowing only safe access."
+
+Think about your piggy bank (moneybox) 🐷.
+
+You put money inside 💰, but no one can directly take it out.
+There is only one way to access it—by opening it properly.
+This keeps your money safe!
+👉 That’s encapsulation! We hide data and provide secure access.
+'''
+
+'''🏦 Real-Life Example: ATM Machine (Banking System)
+Imagine you have a bank account.
+
+Can anyone take money from your account? ❌ NO!
+You need a PIN (password) to access your money. 🔑
+The bank keeps your account details hidden (private).
+👉 This is Encapsulation—hiding account details and giving safe access!
+'''
+# 📌 Encapsulation in Python (Bank System Example)
+
+class BankAccount:
+    def __init__(self, account_number, balance, pin):
+        self.account_number = account_number  # Public Attribute
+        self.__balance = balance  # Private Attribute (Hidden)
+        self.__pin = pin  # Private Attribute (Hidden)
+
+    def deposit(self, amount):
+        """Allow depositing money safely."""
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited ${amount}. New Balance: ${self.__balance}")
+        else:
+            print("Deposit amount must be greater than zero!")
+
+    def withdraw(self, amount, entered_pin):
+        """Allow withdrawal only if PIN is correct."""
+        if entered_pin == self.__pin:
+            if 0 < amount <= self.__balance:
+                self.__balance -= amount
+                print(f"Withdrew ${amount}. New Balance: ${self.__balance}")
+            else:
+                print("Insufficient balance or invalid amount!")
+        else:
+            print("Incorrect PIN! Access Denied.")
+
+    def get_balance(self, entered_pin):
+        """Allow viewing balance only if PIN is correct."""
+        if entered_pin == self.__pin:
+            print(f"Your balance is: ${self.__balance}")
+        else:
+            print("Incorrect PIN! Access Denied.")
+
+# Create a Bank Account
+my_account = BankAccount(account_number=123456, balance=1000, pin=1234)
+
+# User tries to deposit money
+my_account.deposit(500)  # ✅ Deposited $500. New Balance: $1500
+
+# User tries to withdraw money with correct PIN
+my_account.withdraw(200, 1234)  # ✅ Withdrew $200. New Balance: $1300
+
+# User tries to withdraw money with incorrect PIN
+my_account.withdraw(300, 1111)  # ❌ Incorrect PIN! Access Denied.
+
+# User tries to check balance with correct PIN
+my_account.get_balance(1234)  # ✅ Your balance is: $1300
+
+# User tries to check balance with incorrect PIN
+my_account.get_balance(0000)  # ❌ Incorrect PIN! Access Denied.
+
+# Trying to access private variables (Not Allowed)
+# print(my_account.__balance)  ❌ ERROR! Cannot access private variable
+# print(my_account.__pin)      ❌ ERROR! Cannot access private variable
+
+
+# 🔍 Explanation of Encapsulation in the Code
+'''1️⃣ self.__balance and self.__pin are PRIVATE (__ before name)
+Cannot be accessed directly from outside.
+Only the class methods (deposit, withdraw, get_balance) can access them.
+
+2️⃣ Users can ONLY deposit, withdraw, or check balance using methods
+If someone tries to access __balance directly, Python won't allow it! 🚫
+
+3️⃣ PIN is required to withdraw or check balance
+
+Keeps the account secure just like a real ATM! 🔒
+🎯 Why Use Encapsulation?
+✅ Hides sensitive data (No direct access to __balance or __pin).
+✅ Protects data from accidental changes (No one can modify balance directly).
+✅ Controls how data is accessed (Users need a PIN for security).
+✅ Used in real-world applications like ATMs, banking apps, and password storage.
+
+🔥 Industry Example: Online Payment System
+Imagine PayPal or Google Pay.
+
+You cannot directly access your account balance.
+You must log in and verify to view or transfer money.
+The account balance is private (hidden), and you need secure methods to access it.
+👉 Encapsulation makes online banking secure! 🚀'''
+
+
+
+# what is the difference betweeen abstraction and encapsulation 
+
+# 🔍 Difference Between Abstraction & Encapsulation in Python
+# Abstraction = Hiding complex logic 🛠️
+# Encapsulation = Hiding data & controlling access 🔒
+
+'''🎭 Abstraction Example (Hiding Complex Logic)
+💡 Imagine driving a car:
+
+You turn the steering wheel → The car moves.
+You press the brake → The car stops.
+👉 Do you know how the engine works inside? ❌ No!
+👉 You only see the buttons & controls → That’s abstraction! 🚗'''
+
+# 📌 Python Code Example: Abstraction
+
+from abc import ABC, abstractmethod
+
+# Abstract Class (Hides Complex Logic)
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass  # Only an idea, no implementation
+
+# Concrete Class (Actual Implementation)
+class Car(Vehicle):
+    def start(self):
+        print("Car engine starts with a key or button!")
+
+class Bike(Vehicle):
+    def start(self):
+        print("Bike starts with a kick or button!")
+
+# Using the classes
+my_car = Car()
+my_bike = Bike()
+
+my_car.start()  # Output: Car engine starts with a key or button!
+my_bike.start()  # Output: Bike starts with a kick or button!
+# ✅ The driver doesn't care HOW the engine starts, just that it works!
+# ✅ Hides the complex details of the engine—That’s abstraction!
+
+'''🔒 Encapsulation Example (Hiding Data)
+💡 Imagine a bank account:
+
+You cannot see the balance directly.
+You must enter a PIN to check it.
+👉 The balance is hidden inside the bank system → That’s encapsulation!'''
+
+# 📌 Python Code Example: Encapsulation
+
+class BankAccount:
+    def __init__(self, account_number, balance, pin):
+        self.account_number = account_number  # Public Attribute
+        self.__balance = balance  # Private Attribute (Hidden)
+        self.__pin = pin  # Private Attribute (Hidden)
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited ${amount}. New Balance: ${self.__balance}")
+        else:
+            print("Invalid deposit amount!")
+
+    def withdraw(self, amount, entered_pin):
+        if entered_pin == self.__pin:
+            if 0 < amount <= self.__balance:
+                self.__balance -= amount
+                print(f"Withdrew ${amount}. New Balance: ${self.__balance}")
+            else:
+                print("Insufficient balance!")
+        else:
+            print("Incorrect PIN! Access Denied.")
+
+    def get_balance(self, entered_pin):
+        if entered_pin == self.__pin:
+            print(f"Your balance is: ${self.__balance}")
+        else:
+            print("Incorrect PIN! Access Denied.")
+
+# Creating a bank account
+my_account = BankAccount(account_number=123456, balance=1000, pin=1234)
+
+# Depositing money
+my_account.deposit(500)  # ✅ Deposited $500. New Balance: $1500
+
+# Trying to withdraw money with incorrect PIN
+my_account.withdraw(200, 1111)  # ❌ Incorrect PIN! Access Denied.
+
+# Trying to check balance with correct PIN
+my_account.get_balance(1234)  # ✅ Your balance is: $1500
+
+# Trying to access private variables (Not Allowed)
+# print(my_account.__balance)  ❌ ERROR! Cannot access private variable
+# ✅ The balance and PIN are hidden inside the system!
+# ✅ Only deposit, withdraw, and get_balance can access them!
+
+'''💡 Key Takeaways
+🔹 Abstraction
+✔ Hides how things work and shows only necessary details
+✔ Achieved using abstract classes & methods
+✔ Example: Car controls hide engine details
+
+🔹 Encapsulation
+✔ Hides sensitive data and protects it from direct access
+✔ Achieved using private variables & methods
+✔ Example: ATM hides account balance, needs PIN to access
+
+🚀 Industry Example: Banking System
+Abstraction 🎭 → You can transfer money using a banking app, but you don’t see the backend code that connects banks.
+Encapsulation 🔒 → Your bank balance & PIN are private, and you can access them only through secure functions.
+
+👉 Both are used together in real-world applications! 🚀
+'''

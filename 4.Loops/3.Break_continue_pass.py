@@ -1,7 +1,7 @@
 #Break,continue and pass
 #These statements are used to alter the flow of a program
 #break- Breaks the flow of program once this condition is hit
-#COntinue- it skips that particular iteration
+#Continue- it skips that particular iteration
 #Pass-to avoid syntax error
 # def fun():
 #     pass 

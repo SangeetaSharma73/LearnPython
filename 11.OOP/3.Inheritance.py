@@ -86,7 +86,7 @@ class Teacher(Person):
         super().__init__(name, age, gender)  # Inheriting from Person class
         self.employee_id = employee_id
         self.subject = subject
-
+      
     def get_details(self):
         base_details = super().get_details()  # Reuse get_details from Person
         return f"{base_details}, Employee ID: {self.employee_id}, Subject: {self.subject}"

@@ -41,7 +41,7 @@ add(3,4)
 
 a=add(3,4)
 print(a)
-print(type(a))
+print('a',type(a))
 print(type(print(4)))
 
 

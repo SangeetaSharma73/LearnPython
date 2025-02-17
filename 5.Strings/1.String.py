@@ -20,6 +20,22 @@ print(string1)
 a='abc'
 b='abc'
 print(a is b)
+# 🔹 Why is a is b Returning True for Strings?
+# In Python, small strings are interned (cached) for memory optimization. This means that identical string literals are stored in the same memory location.
+
+a = "abc"
+b = "".join(["a", "b", "c"])  # Created dynamically
+print(a is b)  # ❌ False (Different objects)
+print(a == b)  # ✅ True (Same value)
+# 👉 Since b is created at runtime, Python does NOT intern it.
+
+# 📌 Example: Long Strings Are NOT Interned
+a = "this_is_a_very_long_string"
+b = "this_is_a_very_long_string"
+print('long string',a is b)  # ❌ False (Python does not intern long strings)
+print('long string',a == b)  # ✅ True (Same value)
+
+# 🔹 Python typically interns short strings (like "abc", "hello"), but long strings may not be cached.
 
 
 

@@ -38,11 +38,11 @@ d1.y=200
 Demo.x=100
 d1.x=103
 Demo.x=200
-print('d1',d1.y,d1.x)
+print('d1',d1.y,d1.x) #d1 200 103 
 d2=Demo()
-print('d2',Demo.x)
+print('d2',Demo.x) #d2 200
 
-print(d1.__dict__)#here static variables will not be visible
+print('d1 dict',d1.__dict__)#d1 dict {'y': 200, 'x': 103}
 print(Demo.__dict__)
 
 

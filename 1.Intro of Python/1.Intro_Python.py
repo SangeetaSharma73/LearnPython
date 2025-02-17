@@ -243,7 +243,7 @@ x = "awesome"
 def myfunc():
   print("Python is " + x)
 
-myfunc()
+myfunc()  #python is awesome
 
 '''If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.'''
 
@@ -251,11 +251,11 @@ x = "awesome"
 
 def myfunc():
   x = "fantastic"
-  print("Python is " + x)
+  print("Python is " + x)  #python is fantastic
 
 myfunc()
 
-print("Python is " + x)
+print("Python is " + x)  #python is awesome
 
 
 # The global Keyword
@@ -269,7 +269,7 @@ def myfunc():
 
 myfunc()
 
-print("Python is " + x)
+print("Python is " + x) #python is fantastic
 
 # Also, use the global keyword if you want to change a global variable inside a function.
 x = "awesome"
@@ -280,4 +280,4 @@ def myfunc():
 
 myfunc()
 
-print("Python is " + x)
+print("Python is " + x) #python is fantastic

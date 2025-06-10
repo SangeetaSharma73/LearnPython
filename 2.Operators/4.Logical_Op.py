@@ -1,5 +1,5 @@
 #Logical- and , or, not
-print( 3 <5 and 4==3 ) # all condition should be true then true
+print( 3 <5 and 4==3 ) # all condition should be true then true so for part 3 < 5 it is true but second part 4 ==3 is false , in finall we get false
 print(True and True)
 print(True and False)
 print(False and True)

@@ -46,6 +46,12 @@
 // }
 // test();
 
+// 🟩 Output:
+// undefined
+// 10
+// 🧠 Why?
+// var x is hoisted to the top of test, initialized as undefined. First log gives undefined, then it's assigned 10.
+
 //7.
 // var a = 1;
 // function test() {
@@ -53,6 +59,9 @@
 //   var a = 2;
 // }
 // test();
+// 🟩 Output: undefined
+// 🧠 Why?
+// Inside test(), var a is hoisted and shadows the global a. So console.log(a) refers to the local a, which is undefined at that point.
 
 //8.
 // function test() {
@@ -60,6 +69,9 @@
 //   let x = 10;
 // }
 // test();
+// 🟥 Output: ReferenceError: Cannot access 'x' before initialization
+// 🧠 Why?
+// let x is block-scoped and in the TDZ. Accessing it before the let x = 10 line throws an error.
 
 //9.
 // var a = 5;
@@ -69,6 +81,11 @@
 // }
 // foo();
 // console.log(a);
+// 🟩 Output:
+// undefined
+// 5
+// 🧠 Why?
+// In foo(), local var a is hoisted, so global a is shadowed. Local a is undefined at the first log. The outer a remains 5.
 
 //10.
 // function outer() {
@@ -82,6 +99,9 @@
 //   inner();
 // }
 // outer();
+// 🟩 Output: undefined
+// 🧠 Why?
+// In inner(), var x is hoisted, so it shadows the x in outer. It’s undefined at the time of console.log(x).
 
 function outer() {
   var x = 10;
@@ -93,6 +113,31 @@ function outer() {
   inner();
 }
 outer();
+
+// 💥 JavaScript Hoisting:
+// In JavaScript, var declarations are hoisted to the top of their scope, but not their assignments. So the function is interpreted like this:
+
+// function inner() {
+//   var x;          // hoisted declaration
+//   console.log(x); // x is undefined here
+//   x = 20;
+// }
+// ✅ So, does it follow closure behavior?
+// ✔️ Yes, the function inner() still forms a closure over the outer scope (it could access x = 10).
+
+// ❌ But, because it declares a local variable named x, it shadows the outer x, and due to hoisting, that local x is undefined at the time of the console.log.
+
+// ✅ Fix it by removing the local x:
+// function outer() {
+//   var x = 10;
+
+//   function inner() {
+//     console.log(x); // Now this logs 10
+//   }
+
+//   inner();
+// }
+// outer();
 
 //11.
 // var x = 21;
@@ -107,3 +152,6 @@ outer();
 
 // fun();
 // console.log(x);
+// 🟩 Output: undefined
+// 🧠 Why?
+// Inside fun, var x is hoisted and shadows global x. It's undefined at the time of console.log(x).

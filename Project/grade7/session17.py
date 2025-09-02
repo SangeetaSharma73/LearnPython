@@ -29,7 +29,7 @@ print("Average Energy Consumption per Street:\n", avg_energy_per_street)
 
 # Plot Average Energy Consumption
 plt.figure(figsize=(10, 6))
-avg_energy_per_street.plot(kind="bar", color="skyblue")
+avg_energy_per_street.plot(kind="bar", color="blue")
 plt.title("Average Energy Consumption per Street")
 plt.ylabel("Energy Consumption (kWh)")
 plt.xlabel("Street ID")

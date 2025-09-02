@@ -167,10 +167,10 @@ def main():
                 if not is_valid(current_pos, current_shape, grid):
                     current_pos[1] -= 1
                     lock_shape(current_pos, current_shape, current_color, locked)
-
+                    
                     grid, points = check_and_clear(locked)
                     score += points
-
+                    
                     draw_grid(screen, grid, current_shape, current_color, current_pos, score, high_score)
 
                     if score > high_score:

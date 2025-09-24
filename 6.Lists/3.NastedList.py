@@ -41,10 +41,13 @@ print(a)
 l=[4,5,6,7,5,4,3]
 #access all the elements of this list
 for i in l:
-    print(i,end=' ')
+    print(i,end='*')
 print()
 
-population=0
+population=0    
 for i in l:
     population+=i
 print(population)
+
+#same
+print("Total population (sum):", sum(l))

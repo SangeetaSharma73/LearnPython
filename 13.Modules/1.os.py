@@ -36,9 +36,10 @@ Constants like π (pi) and e (Euler's number).
 '''
 
 import math
-print(math.sqrt(16))      # Square root
-print(math.pi)            # Value of pi
-
+print("Square root of 16:", math.sqrt(16))      # Square root
+print("Pi constant:" ,math.pi)            # Value of pi
+print("Sine of 90 degrees:", math.sin(math.radians(90)))
+print("Logarithm base e of 10:", math.log(10))
 
 '''
 4. random
@@ -129,6 +130,8 @@ Operations like grouping, merging, and reshaping data.
 import pandas as pd
 df = pd.DataFrame({'Name': ['Alice', 'Bob'], 'Age': [25, 30]})
 print(df)
+print("Mean age:", df["Age"].mean())
+print("Filter age > 28:\n", df[df["Age"] > 28])
 
 
 '''
